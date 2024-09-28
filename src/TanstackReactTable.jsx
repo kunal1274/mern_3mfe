@@ -50,6 +50,11 @@ const ticketColumns = [
     header: () => <span>Description</span>,
     enableResizing: true,
   }),
+  columnHelper.accessor("Short Description", {
+    cell: (info) => <i>{info.getValue()}</i>,
+    header: () => <span>Short Description</span>,
+    enableResizing: true,
+  }),
   columnHelper.accessor("Tags", {
     cell: (info) => info.getValue(),
     header: () => "Tags",
@@ -89,6 +94,10 @@ const ticketColumns = [
   columnHelper.accessor("Work notes", {
     cell: (info) => info.getValue(),
     header: () => "Work Notes",
+  }),
+  columnHelper.accessor("Latest Work Note", {
+    cell: (info) => <i>{info.getValue()}</i>,
+    header: () => <span>Latest Work Note</span>,
   }),
   columnHelper.accessor("Resolved", {
     cell: (info) => info.getValue(),
